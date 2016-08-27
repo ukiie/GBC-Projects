@@ -1,0 +1,78 @@
+﻿<Window x:Name="MyWindow" x:Class="Movies.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Must Watch Movies v1.034" Height="600" Width="950"
+        ResizeMode="CanMinimize" Icon="movie.png">
+    <Window.Resources>
+        <Style x:Key="Link" TargetType="Button">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Foreground" Value="Blue"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <TextBlock TextDecorations="Underline" 
+                    Text="{TemplateBinding Content}"
+                    Background="{TemplateBinding Background}"/>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Foreground" Value="Red"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ListedItems" TargetType="ListBoxItem">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ListBoxItem">
+                        <Border Name="ItemBorder" BorderBrush="Gray" BorderThickness="0" Margin="0" Padding="10">
+                            <ContentPresenter />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter TargetName="ItemBorder" Property="Background" Value="Gray" />
+                            </Trigger>
+                            <Trigger Property="IsMouseOver"  Value="True">
+                                <Setter TargetName="ItemBorder" Property="Background" Value="LightBlue" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Image x:Name="Image_Here" HorizontalAlignment="Left" Height="389" Margin="264,135,0,0" VerticalAlignment="Top" Width="270"/>
+        <ListBox x:Name="MovieList" ItemContainerStyle="{StaticResource ListedItems}" HorizontalAlignment="Left" Height="355" Margin="10,169,0,0" VerticalAlignment="Top" Width="239" SelectionChanged="MovieList_SelectionChanged">
+
+        </ListBox >
+        <Label Content="Title:" HorizontalAlignment="Left" Margin="539,135,0,0" VerticalAlignment="Top" Width="150" FontWeight="Bold" FontSize="18"/>
+        <Label x:Name="Title_Label" Content="The Shawshank Redemption" HorizontalAlignment="Left" Height="37" Margin="557,169,0,0" VerticalAlignment="Top" Width="278" FontSize="15"/>
+        <Label Content="Release Date:" HorizontalAlignment="Left" Height="32" Margin="539,273,0,0" VerticalAlignment="Top" Width="150" FontWeight="Bold" FontSize="18"/>
+        <Label x:Name="Release_Title" Content="2015-10-15" HorizontalAlignment="Left" Height="26" Margin="557,305,0,0" VerticalAlignment="Top" Width="278" FontSize="15"/>
+        <Label Content="Sold:" HorizontalAlignment="Left" Height="30" Margin="539,331,0,0" VerticalAlignment="Top" Width="150" FontWeight="Bold" FontSize="18"/>
+        <Label x:Name="Sold_Title" Content="$60,0000000" HorizontalAlignment="Left" Height="35" Margin="557,361,0,0" VerticalAlignment="Top" Width="278" FontSize="15"/>
+        <Label Content="Description:" HorizontalAlignment="Left" Height="35" Margin="539,396,0,0" VerticalAlignment="Top" Width="150" FontWeight="Bold" FontSize="18"/>
+        <Label x:Name="Movie_Title_Big" Content="" Height="40" Margin="254,90,394,0" VerticalAlignment="Top" Width="296" FontSize="22" FontFamily="Arial,sans-serif normal" HorizontalAlignment="Center"/>
+        <TextBlock x:Name="Description_Content" HorizontalAlignment="Left" Height="69" Margin="557,431,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="377"/>
+        <Label Content="Genre:" HorizontalAlignment="Left" Height="32" Margin="539,208,0,0" VerticalAlignment="Top" Width="150" FontWeight="Bold" FontSize="18"/>
+        <Label x:Name="Genre_Title" Content="genretext" HorizontalAlignment="Left" Height="30" Margin="557,243,0,0" VerticalAlignment="Top" Width="278" FontSize="15"/>
+        <Image x:Name="StarIcon" HorizontalAlignment="Left" Height="32" Margin="638,200,0,0" VerticalAlignment="Top" Width="32" Source="star.png"/>
+        <Label x:Name="Rating" Content="" HorizontalAlignment="Left" Height="28" Margin="675,200,0,0" VerticalAlignment="Top" Width="83"/>
+
+        <Label x:Name="label1" Content="Must Watch Movies " HorizontalAlignment="Left" Margin="50,10,0,0" VerticalAlignment="Top" Height="72" Width="420" FontSize="55" Foreground="Black" FontFamily="Agency FB" FontWeight="Bold" FontStyle="Italic"/>
+
+        <Button x:Name="Trailer_Link" Content="Watch Trailer" Style="{StaticResource Link}" HorizontalAlignment="Left" Height="21" Margin="539,505,0,0" VerticalAlignment="Top" Width="90" Click="Trailer_Link_Click"/>
+        <Label Content="Created By: RG" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="78" FontSize="10" Margin="856,60,0,0"/>
+        <Image HorizontalAlignment="Left" Height="145" Margin="425,-50,0,0" VerticalAlignment="Top" Width="410" Source="filmreel.jpg"/>
+        <Button x:Name="Update" Content="Editor" HorizontalAlignment="Left" Height="19" Margin="22,101,0,0" VerticalAlignment="Top" Width="78" Click="Update_Click"/>
+        <Button x:Name="Refresh" Content="Refresh" HorizontalAlignment="Left" Height="19" Margin="113,101,0,0" VerticalAlignment="Top" Width="78" Click="Refresh_Click"/>
+        <TextBox x:Name="txtSearch" HorizontalAlignment="Left" Height="19" Margin="63,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="181" TextChanged="txtSearch_TextChanged"/>
+        <Label Content="Search:" HorizontalAlignment="Left" Height="25" Margin="10,144,0,0" VerticalAlignment="Top" Width="53"/>
+
+    </Grid>
+</Window>

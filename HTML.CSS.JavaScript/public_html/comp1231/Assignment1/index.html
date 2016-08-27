@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Roman Garasymovych">
+    <meta name="description" content="Advanced DOM Manipulation - A simple Tutorial presentation of what is DOM and how to ">
+    <meta name="keywords" content="DOM, css, java, javascript, html, tutorial, how, how to, presentation, COMP1231">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Advanced DOM Manipulation</title>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="header" class="header">
+        <h1>Advanced DOM Manipulation</h1>
+    </div>
+    <div class="wrapper">
+        <div id="intro" class="intro">
+
+            <h2 class="border">What is Document Object Model(DOM)</h2>
+            <p>The Document Object Model is a platform- and language-neutral interface that will allow programs and scripts to dynamically access and update the content, structure and style of documents. The document can be further processed and the results of that processing can be incorporated back into the presented page.</p>
+            <p>TREEEEEE </p>
+            <h2 class="border">Getting an element</h2>
+            <p>To manipulate DOM using JavaScript, the appropriate part of the tree must be selected.
+            </p>
+            <p>It can be an individual element. All is needed is to tell JavaScript what it is, which is usually done by using <code>document.getElementById</code>.
+            </p>
+            <img src="images/byIdImage.png" alt="getElByIDImage">
+            <p><code>document.getElementsByTagName</code> works in much the same way as <code>getElementById</code>, except that it takes a tag name (<code>a,ul,li,</code> etc) instead of an ID and returns a NodeList, which is essentially an array of the DOM Elements.
+            </p>
+            <p><code>document.getElementsByClassName</code> returns the same kind of NodeList as <code>getElementsByTagName</code>, except that you pass a class name to be matched, not a tag name.
+            </p>
+        </div>
+        <div>
+            <h2 class="border">createTextNode() and createElement()</h2>
+            <p>The <code>createTextNode()</code> method creates a Text Node with the specified text.</p>
+            <p> By calling <code>createElement()</code> we can create a new element with the argument being the element's HTML tag name.</p>
+            <h2 class="border"> appendChild()</h2>
+            <p>The <code>appendChild()</code> method appends a node as the last child of a node.</p>
+            <p>Using this method and the methods above, we can create new elements and put them inside the document
+            </p>
+            <img src="images/append.png" alt="appendImage">
+            <p>Click the button to create a <code>p</code> element with some text and put it in the <code>div</code> below.</p>
+            <button  onclick="append()">Try it out</button>
+        </div>
+        <div id="myDiv">
+            <p class="append">Append text here.</p>
+        </div>
+        <div>
+            <h2 class="border">removeChild()</h2>
+            <p>The <code>removeChild()</code> removes the specified child node from current element.</p> 
+            <p>The specified child node must be an immediate child of the current element</p>
+            <p>Removed child is no longer present in the document tree, but with the reference returned by the removeChild method it can be inserted later into any element in the same document.</p>
+            <img src="images/remove.png" alt="removeImage">
+            <ul id="someList">
+                <li>Target</li>
+                <li>Walmart</li>
+                <li>Metro</li>
+            </ul>
+            <p>Click the button to remove the first item from the list.</p>
+            <button onclick="del()">Delete</button>
+
+        </div>
+    </div>
+    <script>
+    function append() {
+        var p = document.createElement("span");
+                // Create a <span> node
+                var text = document.createTextNode("Hello guys");
+                // Create a text node
+                p.appendChild(text);
+                // Append the text to <span>
+                document.getElementById("myDiv").appendChild(p);
+                // Append <span> to our <div>
+            }
+        </script>
+
+        <script>
+        function del()
+        {
+            var list = document.getElementById('someList');
+                // <ul> element from which we will remove child
+                list.removeChild(list.childNodes[0]);
+                // removing <ul>' first child node (index 0)
+            }
+        </script>
+    </body>
+
+    </html>

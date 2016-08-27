@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Roman Garasymovych">
+    <meta name="description" content="Pre-lab excercises">
+    <meta name="keywords" content="HTML, Js, javascript, GBC, lab, prelab">
+    <title>Pre-lab 1</title>
+
+</head>
+
+<body>
+    <h1>Prelab1 Ex1</h1>
+    <div id="div1">
+        
+    </div>
+    <script>
+            var num1 = prompt("Enter first number");
+            var num2 = prompt("Enter second number");
+            var div = document.getElementById('div1');
+            if (num1 > num2) {
+                div.innerHTML = "The first numbah is biggah";
+            };
+            if (num2 > num1) {
+                div.innerHTML = "The second numbah is biggah";
+            };
+            if (num1 == num2){
+            div.innerHTML = "the numbahs are equal";
+            };
+        </script>
+</body>
+</html>

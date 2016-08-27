@@ -1,0 +1,36 @@
+﻿<Window x:Name="MyWindow" x:Class="Movies.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Must Watch Movies" Height="600" Width="950"
+        ResizeMode="CanMinimize" Icon="movie.png">
+    <Grid>
+        <Image x:Name="Image_Here" HorizontalAlignment="Left" Height="389" Margin="264,135,0,0" VerticalAlignment="Top" Width="270"/>
+        <Label x:Name="label1" Content="Must Watch Movies" HorizontalAlignment="Left" Margin="236,0,0,0" VerticalAlignment="Top" Height="72" Width="444" FontSize="60" Foreground="Blue" FontFamily="Bernard MT Condensed" FontWeight="Bold" FontStyle="Italic"/>
+        <ListBox x:Name="MovieList" HorizontalAlignment="Left" Height="207" Margin="40,199,0,0" VerticalAlignment="Top" Width="181">
+            <ListBoxItem x:Name="FightClub" Content="Fight Club" Selected="FightClub_Selected"/>
+            <ListBoxItem x:Name="ForrestGump" Content="Forrest Gump" Selected="ForrestGump_Selected"/>
+            <ListBoxItem x:Name="PulpFiction" Content="Pulp Fiction" Selected="PulpFiction_Selected"/>
+            <ListBoxItem x:Name="Inception" Content="Inception" Selected="Inception_Selected"/>
+            <ListBoxItem x:Name="Prestige" Content="The Prestige" Selected="Prestige_Selected"/>
+            <ListBoxItem x:Name="Island" Content="Shutter Island" Selected="Island_Selected"/>
+            <ListBoxItem x:Name="Basterds" Content="Inglourious Basterds" Selected="Basterds_Selected"/>
+            <ListBoxItem x:Name="Departed" Content="The Departed" Selected="Departed_Selected"/>
+            <ListBoxItem x:Name="Suspects" Content="The Usual Suspects" Selected="Suspects_Selected"/>
+            <ListBoxItem x:Name="Redemption" Content="The Shawshank Redemption" Selected="Redemption_Selected"/>
+        </ListBox>
+        <Label Content="Movie Title:" HorizontalAlignment="Left" Margin="539,148,0,0" VerticalAlignment="Top" Width="150" FontWeight="Bold" FontSize="18"/>
+        <Label x:Name="Title_Label" Content="The Shawshank Redemption" HorizontalAlignment="Left" Height="37" Margin="557,182,0,0" VerticalAlignment="Top" Width="278" FontSize="15"/>
+        <Label Content="Release Date:" HorizontalAlignment="Left" Height="32" Margin="539,286,0,0" VerticalAlignment="Top" Width="150" FontWeight="Bold" FontSize="18"/>
+        <Label x:Name="Release_Title" Content="2015-10-15" HorizontalAlignment="Left" Height="26" Margin="557,323,0,0" VerticalAlignment="Top" Width="278" FontSize="15"/>
+        <Label Content="Sold:" HorizontalAlignment="Left" Height="30" Margin="539,354,0,0" VerticalAlignment="Top" Width="150" FontWeight="Bold" FontSize="18"/>
+        <Label x:Name="Sold_Title" Content="$60,0000000" HorizontalAlignment="Left" Height="35" Margin="557,384,0,0" VerticalAlignment="Top" Width="278" FontSize="15"/>
+        <Label Content="Description:" HorizontalAlignment="Left" Height="30" Margin="539,424,0,0" VerticalAlignment="Top" Width="150" FontWeight="Bold" FontSize="18"/>
+        <Label x:Name="Movie_Title_Big" Content="" Height="40" Margin="254,90,405,0" VerticalAlignment="Top" Width="285" FontSize="22" HorizontalAlignment="Center"/>
+        <TextBlock x:Name="Description_Content" HorizontalAlignment="Left" Height="102" Margin="557,459,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="377"/>
+        <Label Content="Genre:" HorizontalAlignment="Left" Height="32" Margin="539,219,0,0" VerticalAlignment="Top" Width="150" FontWeight="Bold" FontSize="18"/>
+        <Label x:Name="Genre_Title" Content="genretext" HorizontalAlignment="Left" Height="30" Margin="557,251,0,0" VerticalAlignment="Top" Width="278" FontSize="15"/>
+        <Image x:Name="StarIcon" HorizontalAlignment="Left" Height="32" Margin="557,86,0,0" VerticalAlignment="Top" Width="32" Source="star.png"/>
+        <Label x:Name="Rating" Content="" HorizontalAlignment="Left" Height="28" Margin="597,90,0,0" VerticalAlignment="Top" Width="83"/>
+
+    </Grid>
+</Window>

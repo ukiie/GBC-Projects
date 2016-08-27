@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Roman Garasymovych">
+    <meta name="description" content="prelab 5 for Lab 5">
+    <meta name="keywords" content="javascript, style, function, html, lab, prelab">
+    <title>Prelab 5 Ex1</title>
+</head>
+
+<body>
+    <h1>Pre Lab 5 Example 1</h1>
+    <div id="d1v">
+        <input id="back" type="text"/>
+        <input type="button" onclick="changeBack()" value="Background"><br>
+        
+        <input id="text" type="text"/>
+        <input type="button" onclick="changeText()" value="Text"/><br>
+        
+        <p id="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi facilisis, arcu ut tristique hendrerit, lorem ex fringilla ipsum, in varius mi sapien non turpis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce justo nisl, suscipit euismod iaculis sed, sagittis eu lorem. Duis suscipit facilisis erat vel laoreet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc sed sem nec sem ultricies pretium eu sit amet diam. Aliquam gravida risus nisl, ut condimentum purus eleifend vel. Nam id massa sit amet felis placerat porta.</p>
+    </div>
+        <script>
+            var division = document.getElementById("d1v");
+            function changeBack()
+            {
+                var backCol = document.getElementById("back").value;
+                division.style.backgroundColor = backCol;
+            }
+            function changeText()
+            {
+                var text = document.getElementById("text").value;
+                document.getElementById("p").style.color = text;
+            }
+        </script>
+</body>
+</html>

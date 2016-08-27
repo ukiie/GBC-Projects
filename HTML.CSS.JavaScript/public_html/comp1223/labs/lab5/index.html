@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Roman Garasymovych">
+    <meta name="keywords" content="html, css, form, lab">
+    <meta name="description" content="lab test 5 which includes creating forms and aligning them">
+    <title>Lab 5</title>
+    <style>
+        body{
+            width: 820px;
+            margin: 0 auto;
+        }
+        form  { 
+            display: table;
+            margin: 2px;
+            border: 1px solid black;
+            width: 400px
+        }
+        #fp{
+            float: left;
+            height: 100px;
+        }
+        #fs{
+            float: right;
+            height: 100px;
+        }
+        #fp label, #fs label{
+            text-align: right;
+        }
+        #fm{
+            float: left;
+            height: 120px;
+        }
+        #fm label{
+            padding-left: 100px;
+        }
+        #fm input{
+            margin-left: -180px;
+        }
+        #fpr{
+            float: right;
+            height: 100px;
+        }
+        table{
+            padding-left: 90px;
+            margin: 5px
+        }
+        p { 
+            display: table-row;
+            margin: 1px;
+        }
+        label {
+            display: table-cell;
+            margin: 1px;
+        
+        }
+        input { 
+            display: table-cell;
+            margin: 1px
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+    <h1>Stationary Purchase Form</h1>
+    </header>
+    <section>
+    <form id="fp">
+        <p>Personal Information</p>
+            <label for="first">First Name:</label>
+            <input type="text" name="first" id="first">
+        <p>
+            <label for="last">Last Name:</label>
+            <input type="text" name="last" id="last">
+        </p>
+        <p>
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email">
+        </p>   
+    </form>
+    <form id="fs">
+        <p>Shipping Address</p>
+        <p>
+            <label for="address">Address: </label>
+            <input type="text" name="address" id="address">
+        </p>
+        <p>
+            <label for="city">City: </label>
+            <input type="text" name="city" id="city"></p>
+        <p>
+            <label for="country">Country: </label>
+            <input type="text" name="country" id="country">
+        </p>
+    </form>
+    <form id="fm">
+        <p>Shipping Method</p>
+        <p>
+            <label for="gr">Ground Regular: </label>
+            <input type="radio" name="gr" value="ground regular" id="gr">
+        </p>
+        <p>
+            <label for="ge">Ground Express: </label>
+            <input type="radio" name="ge" value="ground express" id="ge">
+        </p>
+        <p>
+            <label for="air">Air: </label>
+            <input type="radio" name="air" value="air" id="air">
+        </p>
+        <p>
+            <label for="overnight">Overnight: </label>
+            <input type="radio" name="overnight" value="overnight" id="overnight">
+        </p>
+    </form>
+    <form id="fpr">
+        <p>Products</p>
+        <table>
+            <tr>
+                <td>
+                    <label>8.5 x 11 Paper</label>
+                </td>
+                <td>
+                    <input type="checkbox" name="products" id="11p">
+                </td>
+                <td>
+                    <input type="checkbox" name="products" id="17p">
+                </td>
+                <td>
+                    <label for="17p">11 x 17 Paper</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="22p">11 x 22 Paper</label>
+                </td>
+                <td>
+                    <input type="checkbox" name="products" id="22p">
+                </td>
+                <td>
+                    <input type="checkbox" name="products" id="34p">
+                </td>
+                <td>
+                    <label for="34p">22 x 34 Paper</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label  for="9h">9H Pencils</label>
+                </td>
+                <td>
+                    <input type="checkbox" name="products" id="9h">
+                </td>
+                <td>
+                    <input type="checkbox" name="products" id="fpen">
+                </td>
+                <td>
+                    <label for="fpen">F Pencill</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="hb">HB Pencils</label>
+                </td>
+                <td>
+                    <input type="checkbox" name="products" id="hb">
+                </td>
+                <td>
+                    <input type="checkbox" name="products" id="9b">
+                </td>
+                <td>
+                    <label for="9b">9B Pencils</label>
+                </td>
+            </tr>
+        </table>
+    </form>
+        <input type="submit">
+        <input type="reset"><br>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank">
+        <img style="border:0;width:88px;height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="RIGHT CSS!" />
+    </a>
+            <script type='text/javascript'> //<!--[CDATA[
+	document.write ("<a href='http://validator.w3.org/check?uri=" +
+	location.href+ "\;ss=1;verbose=1' target='display'>" +
+	"<img src='http://gblearn.com/comp1223/wp-content/uploads/2013/09/HTML5_Logo_256.png' " +
+	"width='50' height='50' border='0' " +
+	"alt='Valid HTML5.' " +
+	"title='Valid HTML5' /></a>")
+	dt=new Date(document.lastModified);
+	document.write("<small>This page was last modified on " +
+	dt.toLocaleString() + "</small>")
+//]]--></script>
+    </section>
+</body>
+</html>

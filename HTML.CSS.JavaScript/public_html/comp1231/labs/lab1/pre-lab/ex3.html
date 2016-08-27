@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Roman Garasymovych">
+    <meta name="description" content="Pre-lab excercises">
+    <meta name="keywords" content="HTML, Js, javascript, GBC, lab, prelab">
+    <title>Pre-lab 1</title>
+
+</head>
+
+<body>
+    <h1>Prelab1 Ex3</h1>
+    <div id="content">This is text</div>
+
+<script>
+var _div = document.getElementById("content");
+
+var letter= 0;
+
+letter = prompt("Please enter your grade in a Letter form");
+letter = letter.toLowerCase(); 
+switch (letter){
+
+case "a":
+_div.innerHTML = "Excellent";
+break;
+
+case "b":
+_div.innerHTML = "Good"
+break;
+
+case "c":
+_div.innerHTML = "Adequate";
+break;
+
+case "d":
+_div.innerHTML = "Marginal";
+break;
+
+case "f":
+_div.innerHTML = "Inadequate";
+break;
+
+default:
+_div.innerHTML = "Invalid Letter";
+break;
+
+}
+
+</script>
+
+<script > //<!--[CDATA[
+document.write ("<a href='http://validator.w3.org/check?uri=" +
+location.href+ "\;ss=1;verbose=1' target='display'>" +
+"<img src='http://gblearn.com/courses/wp-content/uploads/2014/01..' " +
+"width='50' height='50' border='0' " +
+"alt='Valid HTML5.' " +
+"title='Valid HTML5' /></a>")
+dt=new Date(document.lastModified);
+document.write("<small>This page was last modified on " +
+dt.toLocaleString() + "</small>")
+//]]--></script>
+</body>
+</html>

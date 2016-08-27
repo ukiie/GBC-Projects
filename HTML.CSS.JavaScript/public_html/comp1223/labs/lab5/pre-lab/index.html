@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Roman Garasymovych">
+    <meta name="keywords" content="html, css, lab, pre-lab, survey">
+    <meta name="description" content="pre-lab 5 which includes survey using basic javascript code">
+    <title>Pre-lab 5</title>
+    <style>
+        .border{
+            border-right: 1px solid black;
+            padding-right: 5px;
+        }
+        h2{
+            color: #660000;
+            font-size: 125%;
+            margin: 0;
+        }
+        textarea{
+            height: 5em;
+            width: 50em;
+        }
+        header{
+            margin: 15px;
+            text-align: right
+        }
+        div{
+            width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+    <header>
+    <h1><i>Evergreen Valley College Survey</i></h1>
+        <a class="border"  href="mailto:romangarasymovych@georgebrown.com;subject:Sitefeedback">Email webmaster</a>
+       <a href="http://georgebrown.ca">George Brown College</a>
+    </header>
+    <section>
+    <h2><i>Personal Informasion</i></h2>
+    <form name="student">
+        <p><b>Name:</b><input type="text" name="student" size="30" maxlength="28"></p>
+        <p><b>Email:</b><input type="email" name="email" size="30" maxlength="28"></p>
+        <p><b>Age:</b><input type="radio" name="age" value="<18">&lt;18
+                <input type="radio" name="age" value="18-25">18-25
+                <input type="radio" name="age" value="26-40">26-40
+                <input type="radio" name="age" value="65+">65+
+        </p>
+        <h2><i>Academic Information</i></h2>
+        <p><b>Goals:</b> Check all that apply<br>
+            <input type="checkbox" name="goals" value="AA">Associate Degree
+            <input type="checkbox" name="goals" value="CSU">Transfer to CSU
+            <input type="checkbox" name="goals" value="UC">Transfer to UC
+            <input type="checkbox" name="goals" value="Personal">Personal Enrichment
+        </p>
+        <p><b>Field of Study:</b> Select that apply; hold CTRL when clicking to select multiple items</p>
+        <select name="academic_field" size="6" multiple>
+            <option value="ACCT">Accounting</option>
+            <option value="ASRT">Astronomy</option>
+            <option value="BUS">Business</option>
+            <option value="CHEM">Chemistry</option>
+            <option value="CIT">Computer/Information Technology</option>
+            <option value="HLTH">Health</option>
+            <option value="HIST">History</option>
+            <option value="LART">Language Arts</option>
+            <option value="MATH">Mathematics</option>
+            <option value="P-E">Physical Education</option>
+            <option value="SOC">Sociology</option>
+            <option value="THEA">Theatre Arts</option>
+        </select>
+        <p><b>Comments:</b></p>
+        <textarea name="comments">
+        </textarea><br>
+        <input type="submit">
+        <input type="reset">
+        </form>
+        </section>
+        </div>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank">
+        <img style="border:0;width:88px;height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="RIGHT CSS!" />
+    </a>
+            <script type='text/javascript'> //<!--[CDATA[
+	document.write ("<a href='http://validator.w3.org/check?uri=" +
+	location.href+ "\;ss=1;verbose=1' target='display'>" +
+	"<img src='http://gblearn.com/comp1223/wp-content/uploads/2013/09/HTML5_Logo_256.png' " +
+	"width='50' height='50' border='0' " +
+	"alt='Valid HTML5.' " +
+	"title='Valid HTML5' /></a>")
+	dt=new Date(document.lastModified);
+	document.write("<small>This page was last modified on " +
+	dt.toLocaleString() + "</small>")
+//]]--></script>
+</body>
+</html>

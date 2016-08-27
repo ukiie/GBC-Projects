@@ -1,0 +1,12 @@
+C:\Users\roman\Documents\gbc\LabTest4\Movies\Movies\bin\Release\Movies.exe.config
+C:\Users\roman\Documents\gbc\LabTest4\Movies\Movies\bin\Release\Movies.exe
+C:\Users\roman\Documents\gbc\LabTest4\Movies\Movies\bin\Release\Movies.pdb
+C:\Users\roman\Documents\gbc\LabTest4\Movies\Movies\obj\Release\MainWindow.baml
+C:\Users\roman\Documents\gbc\LabTest4\Movies\Movies\obj\Release\MainWindow.g.cs
+C:\Users\roman\Documents\gbc\LabTest4\Movies\Movies\obj\Release\App.g.cs
+C:\Users\roman\Documents\gbc\LabTest4\Movies\Movies\obj\Release\Movies_MarkupCompile.cache
+C:\Users\roman\Documents\gbc\LabTest4\Movies\Movies\obj\Release\Movies.g.resources
+C:\Users\roman\Documents\gbc\LabTest4\Movies\Movies\obj\Release\Movies.Properties.Resources.resources
+C:\Users\roman\Documents\gbc\LabTest4\Movies\Movies\obj\Release\Movies.csproj.GenerateResource.Cache
+C:\Users\roman\Documents\gbc\LabTest4\Movies\Movies\obj\Release\Movies.exe
+C:\Users\roman\Documents\gbc\LabTest4\Movies\Movies\obj\Release\Movies.pdb

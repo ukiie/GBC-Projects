@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Roman Garasymovych">
+    <meta name="description" content="prelab 4 for Lab 4">
+    <meta name="keywords" content="javascript, array, html, lab, prelab">
+    <title>Pre Lab 4 Ex1</title>
+</head>
+
+<body>
+    <h1>Prelab4 Ex1</h1>
+    <div id="d1v"></div>
+    <script>
+        function Hyphen(numbers) 
+        {
+            if(numbers.length==0)
+            return [];
+            var result = [numbers[0]];
+            for(var i=1, l=numbers.length;i<l; i++) 
+            {
+                if((numbers[i]%2 + numbers[i-1]%2) == 0) 
+                {
+                    result.push("-");
+                }
+                result.push(numbers[i]);  
+            }
+            return result;
+        }
+        var random = [];
+        while(random.length<20)
+        {
+            random.push(Math.floor(Math.random()*10));  
+        }
+        document.getElementById("d1v").innerHTML = "[" +random.join(" ") + "]" + "<br><br>" + Hyphen(random).join("");
+    </script>
+    
+    
+    
+    <script > //<!--[CDATA[
+	document.write ("<a href='http://validator.w3.org/check?uri=" +
+	location.href+ "\;ss=1;verbose=1' target='display'>" +
+	"<img src='http://gblearn.com/courses/wp-content/uploads/2014/01/HTML5_Logo_2561.png' " +
+	"width='50' height='50' border='0' " +
+	"alt='Valid HTML5.' " +
+	"title='Valid HTML5' /></a>")
+	dt=new Date(document.lastModified);
+	document.write("<small>This page was last modified on " +
+	dt.toLocaleString() + "</small>")
+//]]--></script>
+</body>
+</html>

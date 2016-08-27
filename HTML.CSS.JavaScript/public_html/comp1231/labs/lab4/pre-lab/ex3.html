@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Roman Garasymovych">
+    <meta name="description" content="prelab 4 for Lab 4">
+    <meta name="keywords" content="javascript, array, html, lab, prelab">
+    <title>Pre Lab 4 Ex3</title>
+</head>
+
+<body>
+    <h1>Prelab4 Ex3</h1>
+    <div id="d1v"></div>
+    <script>
+       <script type="text/javascript">
+            
+            var arraySize = prompt("How many elements should the array have?");
+            var allNum = [],
+                totalSum = 0, 
+                list = "<ul>";
+            
+            if (arraySize < 1 || isNaN(arraySize)){
+                arraySize = 50;
+            }
+            //Generate numbers and list
+            for(i = 0; i < arraySize; i++){
+                allNum[i] = parseInt(Math.random() * 20);
+                list += "<li>" + allNum[i] + "</li>";
+                totalSum += allNum[i];
+            }
+            
+            //Get Mean Median Mode
+            var mean = 0,
+                median = 0,
+                modeMap = {},
+                mode = allNum[0],
+                maxCount = 1,
+                colors = ["blue", "red", "green", "purple", "pink", "orange"],
+                y = -1;
+                
+            for(k = 0; k < arraySize; k++){
+                var num = allNum[k];
+                if(k < arraySize){
+                    allNum.sort(function(a,b) {return a - b;});
+                    mean = totalSum/arraySize;
+                    median = allNum[arraySize/2];
+                }
+                if(median == undefined){
+                    median = (allNum[Math.floor(arraySize/2)] + allNum[Math.ceil(arraySize/2)])/2;
+                }
+                if (modeMap[num] == null){
+                    modeMap[num] = 1;
+                }
+                else{modeMap[num]++;}
+                if (modeMap[num] > maxCount){
+                    mode = num;
+                    maxCount = modeMap[num];
+                }
+                else if (modeMap[num] == maxCount){
+                    mode += " & " + "<a style='color:" + colors[y] + ";'>" + num + "</a>";
+                    maxCount = modeMap[num];
+                    y++;
+                }
+            }
+            
+            list += "</ul>"
+            document.getElementById("left").innerHTML=list;
+            document.getElementById("right").innerHTML= 
+                "  Mode: " + mode + "<br>" + 
+                "Median: " + median + "<br>" + 
+                "  Mean: " + mean + "<br>";
+            
+    </script>
+</body>
+</html>

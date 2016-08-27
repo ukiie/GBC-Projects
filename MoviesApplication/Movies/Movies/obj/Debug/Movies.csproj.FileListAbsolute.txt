@@ -1,0 +1,17 @@
+C:\Users\roman\Documents\gbc\LabTest4\Movies\Movies\bin\Debug\Movies.exe.config
+C:\Users\roman\Documents\gbc\LabTest4\Movies\Movies\bin\Debug\Movies.exe
+C:\Users\roman\Documents\gbc\LabTest4\Movies\Movies\bin\Debug\Movies.pdb
+C:\Users\roman\Documents\gbc\LabTest4\Movies\Movies\obj\Debug\Movies.csprojResolveAssemblyReference.cache
+C:\Users\roman\Documents\gbc\LabTest4\Movies\Movies\obj\Debug\MainWindow.baml
+C:\Users\roman\Documents\gbc\LabTest4\Movies\Movies\obj\Debug\MainWindow.g.cs
+C:\Users\roman\Documents\gbc\LabTest4\Movies\Movies\obj\Debug\App.g.cs
+C:\Users\roman\Documents\gbc\LabTest4\Movies\Movies\obj\Debug\Movies_MarkupCompile.cache
+C:\Users\roman\Documents\gbc\LabTest4\Movies\Movies\obj\Debug\Movies.g.resources
+C:\Users\roman\Documents\gbc\LabTest4\Movies\Movies\obj\Debug\Movies.Properties.Resources.resources
+C:\Users\roman\Documents\gbc\LabTest4\Movies\Movies\obj\Debug\Movies.csproj.GenerateResource.Cache
+C:\Users\roman\Documents\gbc\LabTest4\Movies\Movies\obj\Debug\Movies.exe
+C:\Users\roman\Documents\gbc\LabTest4\Movies\Movies\obj\Debug\Movies.pdb
+C:\Users\roman\Documents\gbc\LabTest4\Movies\Movies\obj\Debug\PromptAdmin.baml
+C:\Users\roman\Documents\gbc\LabTest4\Movies\Movies\obj\Debug\PromptAdmin.g.cs
+C:\Users\roman\Documents\gbc\LabTest4\Movies\Movies\obj\Debug\AdminView.baml
+C:\Users\roman\Documents\gbc\LabTest4\Movies\Movies\obj\Debug\AdminView.g.cs

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Roman Garasymovych">
+    <meta name="description" content="My pre-lab for lab test 3">
+    <meta name="keywords" content="html, css, tables">
+    <title>Pre-lab 3</title>
+    <style>
+        table{
+            margin: 30px;
+        }
+        #camel{
+            text-align: center;
+            width: 250px;
+        }
+        table, td{
+            border: 1px solid gray;
+        }
+        .bottom{
+            vertical-align: bottom;
+            margin-bottom: 0 auto;
+            font-size: 10px;
+        }
+        .a{
+            text-align: left;
+        }
+        .b{
+            text-align: right;
+        }
+        .c{
+            margin: 10px;
+        }
+        #colored{
+            width: 800px;
+            background-color: red;
+            text-align: left
+        }
+        #head{
+            text-align: center;
+        }
+        #yellow{
+            background-color: yellow;
+        }
+        #green{
+            background-color: green;
+        }
+        #stupid{
+            width: 800px;
+            border-spacing: 20px;
+        }
+        .yellow{
+            text-align: left;
+            background-color: yellow;
+        }
+        .right{
+            text-align: right;
+        }
+        .tb1{
+            text-align: left;
+            vertical-align: top;
+        }
+        .tb2{
+            text-align: center;
+            vertical-align: top;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="camel">
+        <tr>
+            <td rowspan="2"><img src="images/camel.jpg" height="170" width="200" alt="log"></td>
+            <td colspan="4">
+                <h1>Camleid comparison</h1>
+                <p class="bottom"><b>Approximate as of 6/2007</b></p>
+            </td>
+        </tr>
+        <tr>
+            <td><b class="c"># of Humps</b></td>
+            <td><b class="c">Indigenous region</b></td>
+            <td><b class="c">Spits?</b></td>
+            <td><b class="c">Produces Wool?</b></td>
+        </tr>
+        <tr>
+            <td class="b"><b>Camels(bactrian)</b></td>
+            <td class="a">2</td>
+            <td class="a">Africa/Asia</td>
+            <td class="a">Yes</td>
+            <td class="a">Yes</td>
+        </tr>
+        <tr>
+            <td class="b"><b>Llamas</b></td>
+            <td class="a">1</td>
+            <td class="a">Andes Mountains</td>
+            <td class="a">Yes</td>
+            <td class="a">Yes</td>
+        </tr>
+    </table>
+    <table id="colored">
+        <tr>
+            <td id="head" colspan="3"><b>Three Cols</b></td>
+        </tr>
+        <tr>
+            <td id="yellow" rowspan="2">Row 2 col 1</td>
+            <td>Row 2 col 2</td>
+            <td id="green">Row 2 col 3</td>
+        </tr>
+        <tr>
+            <td>Row 3 col 2</td>
+            <td>Row 3 col 3</td>
+        </tr>
+        <tr>
+            <td colspan="3">Last Row</td>
+        </tr>
+    </table>
+    <table id="stupid">
+        <tr>
+            <td class="tb1" rowspan="3">Table Sample</td>
+            <td class="yellow">COL 1</td>
+            <td class="right">COL 2</td>
+            <td class="tb2" rowspan="3">Table Sample</td>
+        </tr>
+        <tr>
+            <td class="yellow">COL 3</td>
+            <td class="right">COL 4</td>
+        </tr>
+        <tr>
+            <td class="yellow">COL 5</td>
+            <td class="right">COL 6</td>
+        </tr>
+    </table>
+    <br><script type='text/javascript'> //<!--[CDATA[
+	document.write ("<a href='http://validator.w3.org/check?uri=" +
+	location.href+ "\;ss=1;verbose=1' target='display'>" +
+	"<img src='http://gblearn.com/comp1223/wp-content/uploads/2013/09/HTML5_Logo_256.png' " +
+	"width='50' height='50' border='0' " +
+	"alt='Valid HTML5.' " +
+	"title='Valid HTML5' /></a>")
+	dt=new Date(document.lastModified);
+	document.write("<small>This page was last modified on " +
+	dt.toLocaleString() + "</small>")
+//]]--></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Pre Lab 2</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Roman Garasymovych">
+        <meta name="description" content="prelab 2 fo lab 2">
+        <meta name="keywords" content="lab, prelab, HTML, html, javascrit, js">
+              
+    </head>
+    <body>
+        <a href="/comp1231/index.html">Home</a>
+        
+        <div id="div">
+            
+        </div>
+        <script>
+            var entries = prompt("How many list items would you like?");
+            var div = document.getElementById("div");
+            if(isNaN(entries))
+            {
+                div.innerHTML = "Please enter a valid input";
+            }
+            else
+            {
+                for( ; entries > 0 ; entries-- )
+                {
+                    //div.innerHTML = entries + "<br>"; //doesnt work (only writes last variable value)
+                    document.write(entries + "<br>"); //works but doesnt put text inside div
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Roman Garasymovych">
+    <meta name="keywords" content="html, css, page layout">
+    <meta name="description" content="how to properly lay out your page">
+    <title>Pre-lab 4</title>
+    <style>
+        body{
+            background: linear-gradient(90deg, yellow, purple )
+        }
+        div{
+            width: 960px;
+            margin: 0 auto;
+            clear: left;
+        }
+        header{
+            background-color: blue;
+            text-align: right;
+            padding-right: 5px;
+            margin: 0 auto;
+        }
+        aside{
+            background-color: yellow;
+            width: 340px;
+            height: 400px;
+            text-align: left;
+            padding-top: 15px;
+            padding-left: 3px;
+            margin-right: 2px;
+            float: left;
+        }
+        section{
+            background-color: red;
+            width: 600px;
+            height: 400px;
+            padding-top: 15px;
+            padding-left: 3px;
+            float: right;
+        }
+        footer{
+            background-color: green;
+            clear: both;
+            text-align: center;
+        }
+        header, footer{
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="p2.html">p2</a>
+    <div>
+        <header>
+            <h4>Header</h4>
+        </header>
+        <aside>
+            <h2>Main</h2>
+            <p>width = 340px</p>
+            <p>Minimum Height = 400px</p>
+        </aside>
+        <section>
+            <h1>Main</h1>
+            <p>width = 600px</p>
+            <p>Minimum Height = 400px</p>
+        </section>
+        <footer>
+            <h4>footer content here</h4>
+        </footer>
+    </div>
+</body>
+</html>

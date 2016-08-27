@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Roman Garasymovych">
+    <meta name="description" content="prelab 4 for Lab 4">
+    <meta name="keywords" content="javascript, array, html, lab, prelab">
+    <title>Pre Lab 4 Ex2</title>
+</head>
+
+<body>
+    <h1>Prelab4 Ex2</h1>
+    <div id="d1v"></div>
+    <script>
+       var store = [
+            [
+              "Science",["Bold: How to Go Big, Create Wealth and Impact the World", " Peter H. Diamandis ", " 336 "], 
+                ["He Wanted the Moon: The Madness and Medical Genius of Dr. Perry Baird, and His Daughter's Quest to Know Him", " Mimi Bairc ", " 278 "] ,
+                ["A Matter of Breeding: A Biting History of Pedigree Dogs and How the Quest for Status Has Harmed Man's Best Friend", " Michael Brandow ", " 288 "]
+            ],
+            [
+                "Fiction",['It'," Stephen King ", ' 1398 '],
+                ["The Great Gatsby", " F. Scott Fitzgerald ", " 180 "],
+                ["The Catcher in the Rye", " J.D. Salinger ", " 277 "]
+            ],
+            [
+                "Education",["The Test: Why Our Schools are Obsessed with Standardized Testing — But You Don't Have to Be", " Anya Kamenetz ", "272"],
+                ["The 20Time Project: How educators can launch Google's formula for future-ready innovatio
+                 n", " Kevin Brookhouser, Ria Megnin", " 152"],
+                ["Brave Girls: Raising Young Women with Passion and Purpose to Become Powerful Leaders", " Stacey Radin, Leslie Goldman ", " 304"]
+            ]
+        ];
+        for(var i = 0; i < store.length; i++) {
+            document.write("<h2>"+store[i][0]+"</h2>");
+            for(var j = 0; j < store[i].length; j++) {
+            document.write(store[i][j]+"<br>");
+            }
+        }
+    </script>
+    <script > //<!--[CDATA[
+	document.write ("<a href='http://validator.w3.org/check?uri=" +
+	location.href+ "\;ss=1;verbose=1' target='display'>" +
+	"<img src='http://gblearn.com/courses/wp-content/uploads/2014/01/HTML5_Logo_2561.png' " +
+	"width='50' height='50' border='0' " +
+	"alt='Valid HTML5.' " +
+	"title='Valid HTML5' /></a>")
+	dt=new Date(document.lastModified);
+	document.write("<small>This page was last modified on " +
+	dt.toLocaleString() + "</small>")
+//]]--></script>
+</body>
+</html>

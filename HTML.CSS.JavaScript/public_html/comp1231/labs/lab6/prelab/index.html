@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre lab 6 Ex1</title>
+    <style>
+        *{
+            margin: 0 auto;
+            margin-left: 50px;
+        }
+        body{
+            background-color: aliceblue;
+        }
+        input{
+              padding: 10px;
+              border: solid 1px #dcdcdc;
+              transition: box-shadow 0.3s, border 0.3s;
+        }
+        p{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <form name="someform" onsubmit="displayData()">
+        <label>First Name: </label>
+        <br>
+        <input type="text" id="fname"  size="50" autofocus required onblur="FirstName()"><p id="first"></p>
+        <br>
+        <label>Last Name: </label>
+        <br>
+        <input type="text" id="lname" size="50" required onblur="LastName()"><p id="last"></p>
+        <br>
+        <label>Email: </label>
+        <br>
+        <input type="email" id="email" required><p id="em"></p>
+        <br>
+        <label>Password: </label>
+        <br>
+        <input type="password" id="password" required onblur="ConPass()">
+        <br>
+        <label>Confirm Password: </label>
+        <br>
+        <input type="password" id="confirmPassword" required onblur="ConPass()"><p id="pass" ></p>
+        <br>
+        <label>Payment Type:</label>
+        <br>
+        <select required id="payment">
+            <option disabled selected> - - select an option - - </option>
+            <option value="weekly">Weekly</option>
+            <option value="monthly">Monthly</option>
+            <option value="yearly">Yearly</option>
+        </select>
+        <br>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+    <div id="display">
+    
+    </div>
+    <script type="text/javascript">
+        function FirstName(){
+            var fname = document.getElementById("fname").value;
+            if(fname.length < 2){
+                document.getElementById("fname").style.borderColor = "red";
+                document.getElementById("first").innerHTML = "<img src='images/error.png' width='12px' height='12px'>\tmust be at least 2 charachter long";
+            }
+            else{
+                document.getElementById("fname").style.borderColor = "green";
+                document.getElementById("first").innerHTML = "<img src='images/check.png' width='12px' height='12px'>";
+            }
+        }
+        
+        function LastName(){
+            var lname = document.getElementById("lname").value;
+            if(lname.length < 2){
+                document.getElementById("lname").style.borderColor = "red";
+                document.getElementById("last").innerHTML = "<img src='images/error.png' width='12px' height='12px'>\tmust be at least 2 charachter long";
+            }
+            else{
+                document.getElementById("lname").style.borderColor = "green";
+                document.getElementById("last").innerHTML = "<img src='images/check.png' width='12px' height='12px'>";
+            }
+        }
+        function ConPass(){
+            var pass = document.getElementById('password').value;
+            var cpass = document.getElementById('confirmPassword').value;
+            if(pass != cpass || pass.length < 2)
+            {
+                document.getElementById("password").style.borderColor = "red";
+                document.getElementById("confirmPassword").style.borderColor = "red";
+                document.getElementById("pass").innerHTML = "<img src='images/error.png' width='12px' height='12px'>\tpasswords must match and be at least 2 charachter long";
+            }
+            else{
+                document.getElementById("password").style.borderColor = "green";
+                document.getElementById("confirmPassword").style.borderColor = "green";
+                document.getElementById("pass").innerHTML = "<img src='images/check.png' width='12px' height='12px'>";
+            }
+        }
+        function displayData(){
+            document.getElementById("display").innerHTML = "First Name:" +
+           document.getElementById("fname").value + "<br>" + "Last Name:" +
+           document.getElementById("lname").value + "<br>" + "E-mail: " +
+           document.getElementById("email").value + "<br>" + "Password:" +
+           document.getElementById("password").value + "<br>" + "Payment Method:" +
+           document.getElementById("payment").value + "<br>"
+        }
+    </script>
+</body>
+</html>

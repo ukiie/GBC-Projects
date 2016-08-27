@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Lab Test 2</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Roman Garasymovych">
+        <meta name="description" content="Lab test 2 for COMP1231">
+        <meta name='keywords' content="lab test, lab, html, javascript, js">
+    </head>
+    <body>
+        <div id="div1">
+        
+        </div>
+        <script>
+            var start = prompt("Enter first(START) number  - Must be positive ");
+            var end = prompt("Enter second(END) number  - Must be positive  - Must be bigger than the first number");
+            var step = prompt("Enter the third(STEP) number  - Must be between 1 and 10");
+            var div = document.getElementById('div1');
+            ul = " " 
+            ul += '<ul>'
+            if(isNaN(start, end, step))
+            {
+                alert("Validate your input");
+            }
+            else if(end < start)
+            {
+                alert("Make sure 2nd number is bigger than 1st")
+            }
+            else if(step > 10)
+            {
+                alert("Please make sure the third number is between 1 and 10");
+            }
+            for (i=start; i<end; i++)
+            {
+                ul += '<li>' + (i++) + '</li>'
+                for (j=step; j>=10; j++)
+                {
+                    ul += '<li>' + (j+i) + '</li>'
+                }
+            }
+            ul += '</ul>'
+            div.innerHTML = ul;
+        </script>
+    </body>
+</html>
